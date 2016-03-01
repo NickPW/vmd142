@@ -29,7 +29,7 @@ h4 {
 // classes
 .home-text {
 	color: $white;
-	text-transform: uppercase; // refer to ‘flexible, creative, responsive’ text in PNG
+	text-transform: uppercase;
 	padding: 10px 0;
 	border-bottom: 3px solid rgba(255,255,255,0.15);
 	margin: 20px 0;
@@ -39,11 +39,18 @@ h4 {
 
 .home-h1 {
 	color: $blue;
-	font-size: 4.5em; // 4.5x base
-	font-weight: 700;
+	font-size: 2.5em;
+	font-weight: 200;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
+
+@media (min-width: 768px) {
+    .home-h1 {
+        font-size: 4.5em; // 4.5x base font-size
+    }
+}
+
 .home-h1>span {
 	color: $white;
 }

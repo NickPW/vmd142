@@ -88,18 +88,24 @@ h4 {
 /* line 40, ../scss/_typography.scss */
 .home-h1 {
   color: #25cbf5;
-  font-size: 4.5em;
-  font-weight: 700;
+  font-size: 2.5em;
+  font-weight: 200;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-/* line 47, ../scss/_typography.scss */
+@media (min-width: 768px) {
+  /* line 49, ../scss/_typography.scss */
+  .home-h1 {
+    font-size: 4.5em;
+  }
+}
+/* line 54, ../scss/_typography.scss */
 .home-h1 > span {
   color: white;
 }
 
-/* line 51, ../scss/_typography.scss */
+/* line 58, ../scss/_typography.scss */
 .lead {
   letter-spacing: 1px;
   margin-bottom: 60px;
@@ -198,6 +204,22 @@ label {
   margin-bottom: 40px;
 }
 
+/* line 19, ../scss/_forms.scss */
+.form-control {
+  border-radius: 0;
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #666666;
+  background: white;
+  transition: all 200ms ease-in;
+}
+
+/* line 28, ../scss/_forms.scss */
+.form-control:focus {
+  background: #f5f4f2;
+  border-color: #666666;
+}
+
 /* line 1, ../scss/_other.scss */
 #home {
   background-color: #333333;
@@ -237,20 +259,22 @@ label {
   background-color: #333333;
 }
 
-/* line 35, ../scss/_other.scss */
+/* line 37, ../scss/_other.scss */
 .color-reverse,
 .color-reverse h2,
-.color-reverse .icon {
+.color-reverse h3,
+.color-reverse .icon
+.color-reverse ul > li > a {
   color: white;
 }
 
-/* line 40, ../scss/_other.scss */
+/* line 42, ../scss/_other.scss */
 .color-reverse .icon:before,
 .color-reverse .icon:after {
   border-bottom-color: white;
 }
 
-/* line 45, ../scss/_other.scss */
+/* line 47, ../scss/_other.scss */
 .icon {
   display: inline-block;
   font-size: 1.3em;
@@ -261,7 +285,7 @@ label {
   color: #25cbf5;
 }
 
-/* line 56, ../scss/_other.scss */
+/* line 58, ../scss/_other.scss */
 .icon:before,
 .icon:after {
   display: inline-block;
@@ -272,28 +296,28 @@ label {
   width: 50px;
 }
 
-/* line 65, ../scss/_other.scss */
+/* line 67, ../scss/_other.scss */
 .icon:before {
   left: 0;
 }
 
-/* line 69, ../scss/_other.scss */
+/* line 71, ../scss/_other.scss */
 .icon:after {
   right: 0;
 }
 
-/* line 73, ../scss/_other.scss */
+/* line 75, ../scss/_other.scss */
 .icon-bg {
   color: white;
 }
 
-/* line 78, ../scss/_other.scss */
+/* line 80, ../scss/_other.scss */
 .icon-bg:before,
 .icon-bg:after {
   border-bottom-color: white;
 }
 
-/* line 82, ../scss/_other.scss */
+/* line 84, ../scss/_other.scss */
 .about-col .fa {
   width: 90px;
   height: 90px;
@@ -303,12 +327,12 @@ label {
   background-color: #f5f4f2;
 }
 
-/* line 91, ../scss/_other.scss */
+/* line 93, ../scss/_other.scss */
 .services-col {
   color: #25cbf5;
 }
 
-/* line 95, ../scss/_other.scss */
+/* line 97, ../scss/_other.scss */
 .services-col h3 {
   color: #25cbf5;
   margin-top: 0;
@@ -317,7 +341,7 @@ label {
   font-size: 1.75em;
 }
 
-/* line 103, ../scss/_other.scss */
+/* line 105, ../scss/_other.scss */
 .services-col p {
   color: #666666;
   letter-spacing: 1px;
@@ -325,7 +349,7 @@ label {
   line-height: 2;
 }
 
-/* line 110, ../scss/_other.scss */
+/* line 112, ../scss/_other.scss */
 .services-col .fa {
   width: 70px;
   height: 70px;
@@ -337,12 +361,12 @@ label {
   margin-bottom: 10px;
 }
 
-/* line 121, ../scss/_other.scss */
+/* line 123, ../scss/_other.scss */
 .contact-hours .fa {
   color: #25cbf5;
 }
 
-/* line 125, ../scss/_other.scss */
+/* line 127, ../scss/_other.scss */
 .social-channels .fa {
   width: 40px;
   height: 40px;
@@ -351,4 +375,84 @@ label {
   color: #666666;
   background-color: #f5f4f2;
   margin-bottom: 10px;
+}
+
+/* line 137, ../scss/_other.scss */
+.author {
+  color: #25cbf5;
+  font-size: 1.1em;
+}
+
+/* line 142, ../scss/_other.scss */
+.item-img-wrap {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 148, ../scss/_other.scss */
+.item-img-wrap img {
+  transition: all 200ms linear;
+}
+
+/* line 151, ../scss/_other.scss */
+.item-img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 158, ../scss/_other.scss */
+.item-img-overlay span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/plus.png) no-repeat center center rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+/* line 169, ../scss/_other.scss */
+.item-img-wrap:hover .item-img-overlay span {
+  opacity: 1;
+}
+
+/* line 172, ../scss/_other.scss */
+.item-img-wrap:hover img {
+  transform: scale(1.1);
+}
+
+/* line 181, ../scss/_other.scss */
+.about-col,
+.team-col,
+.services-col,
+.portfolio-col,
+.facts-col,
+.blog-col {
+  margin-bottom: 40px;
+}
+
+/* line 185, ../scss/_other.scss */
+.blog-col span {
+  color: #666666;
+  font-size: 0.9em;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* line 192, ../scss/_other.scss */
+.services-col {
+  color: #25cbf5;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* line 198, ../scss/_other.scss */
+  .services-col {
+    text-align: left;
+  }
 }
