@@ -2,6 +2,7 @@
 	background-color: $navbar-default-bg;
 	font-family: $navbar-default-font-family;
 	text-transform: uppercase; // refer to PNG
+    border: none;
 }
 
 .navbar-default .navbar-brand {
@@ -14,6 +15,6 @@
 	color: $navbar-default-link-color;
 	&:hover,
 	&:focus {
-		color: $navbar-default-link-hover-color;
+        color: $navbar-default-link-hover-color;
 	}
 }
